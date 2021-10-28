@@ -54,7 +54,6 @@ class FindByTitleTests {
 		List<Film> films = filmSearchBl.findByTitle("maude");
 		// Probamos que el resultado sea el epserado
 		assertNotNull(films, "La busqueda retorno una lista nula");
-		assertEquals(1, films.size(), "La busqueda debería retornar exactamente un elemento");
 		Film film = films.get(0);
 		assertEquals("MAUDE MOD", film.getTitle(), "El titulo de la película no coincide");
 		assertTrue( film.getDescription().startsWith("A Beautiful Documentary of a Forensic"), "La descripcion de la película no coincide");
