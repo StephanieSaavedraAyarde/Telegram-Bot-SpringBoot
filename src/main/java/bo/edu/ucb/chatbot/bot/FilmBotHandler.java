@@ -48,7 +48,7 @@ public class FilmBotHandler extends TelegramLongPollingBot {
 
             String msg = update.getMessage().getText();
 
-            Boolean caso = msg.contains("|");
+            Boolean caso = msg.contains("@");
             System.out.println("CASO: "+caso);
 
             if(caso==false){
@@ -65,7 +65,7 @@ public class FilmBotHandler extends TelegramLongPollingBot {
                 }
             }
             if(caso==true){
-                String [] division = msg.split("|");
+                String [] division = msg.split("@");
 
                 String [] parte1 = division[0].split("=");
                 String [] parte2 = division[1].split("=");
